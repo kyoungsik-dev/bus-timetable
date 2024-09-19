@@ -1,11 +1,11 @@
 {
-  "name": "3202 (삼미시장-판교) 버스 시간표",
-  "short_name": "3202 버스 시간표",
-  "description": "삼미시장과 판교 간 버스 시간표를 제공하는 웹 앱",
+  "name": "시흥-판교 버스 시간표",
+  "short_name": "시흥-판교 버스 시간표",
+  "description": "시흥-판교 버스 시간표를 제공합니다.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#4CAF50",
+  "theme_color": "#183A37",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",

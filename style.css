@@ -1,0 +1,101 @@
+body {
+  font-family: 'Pretendard';
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #183A37;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.15rem;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  padding: 1rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 600px;
+  margin: auto;
+}
+
+.selector-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 두 선택 요소 사이의 간격 */
+  width: 100%;
+  margin-bottom: 1rem; /* 선택 영역과 테이블 사이의 간격 */
+}
+
+#route-selector {
+  flex: 1; /* 가변 크기 */
+}
+
+#day-selector {
+  flex: 0 0 100px; /* 고정 크기 (150px) */
+}
+
+.table-container {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+th {
+  background-color: #183A37;
+  color: white;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+select {
+  -webkit-appearance: none;  /* 기본 화살표 숨기기 */
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ccc;  /* 테두리 스타일 */
+  padding: 10px 33px 10px 10px;
+  font-size: 1rem;
+  border-radius: 8px;  /* 둥근 모서리 */
+  width: 100%;
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;
+  cursor: pointer;
+}
+
+/* 선택 박스의 focus 상태 스타일 */
+select:focus {
+  outline: none;
+  border-color: #183A37; /* 포커스 시 테두리 색상 */
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5); /* 포커스 시 그림자 효과 */
+}
