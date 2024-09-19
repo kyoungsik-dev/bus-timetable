@@ -1,6 +1,6 @@
 {
-  "name": "삼미시장-판교 버스 시간표",
-  "short_name": "버스 시간표",
+  "name": "3202 (삼미시장-판교) 버스 시간표",
+  "short_name": "3202 버스 시간표",
   "description": "삼미시장과 판교 간 버스 시간표를 제공하는 웹 앱",
   "start_url": "/",
   "display": "standalone",
