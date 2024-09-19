@@ -1,8 +1,8 @@
 // 버스 시간표 데이터를 busSchedules.js에서 가져옴
 
-const routeSelector = document.getElementById('route-selector');
 const daySelector = document.getElementById('day-selector');
 const scheduleBody = document.getElementById('schedule-body');
+const routeNameDisplay = document.getElementById('route-name');
 
 // 저장된 노선 번호 불러오기
 const savedRoute = localStorage.getItem('selectedRoute') || '3202';
@@ -26,10 +26,13 @@ function loadSchedule(route, day) {
     
     scheduleBody.appendChild(row);
   }
+
+  routeNameDisplay.textContent = busSchedules[route].name;
 }
 
 // 초기 로드 시 저장된 노선과 요일을 불러와서 시간표 표시
-routeSelector.value = savedRoute;
+const selectedRouteButton = document.querySelector(`[data-route="${savedRoute}"]`);
+selectedRouteButton.classList.add('selected');
 daySelector.value = savedDay;
 loadSchedule(savedRoute, savedDay);
 
@@ -38,17 +41,24 @@ window.addEventListener('load', function() {
   elem.classList.add('loaded');
 });
 
-
-// 노선 선택 시 시간표 변경
-routeSelector.addEventListener('change', (e) => {
-  const selectedRoute = e.target.value;
-  localStorage.setItem('selectedRoute', selectedRoute); // 선택한 노선 저장
-  loadSchedule(selectedRoute, daySelector.value);
-});
-
 // 요일 선택 시 시간표 변경
 daySelector.addEventListener('change', (e) => {
   const selectedDay = e.target.value;
   localStorage.setItem('selectedDay', selectedDay); // 선택한 요일 저장
-  loadSchedule(routeSelector.value, selectedDay);
+  loadSchedule(savedRoute, selectedDay);
 });
+
+const buttons = document.getElementsByClassName('route-btn');
+
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', e => {
+    for (let j = 0; j < buttons.length; j++) {
+      buttons[j].classList.remove('selected');
+    }
+    const route = e.target.getAttribute('data-route');
+    e.target.classList.add('selected');
+    
+    localStorage.setItem('selectedRoute', route); // 선택한 노선 저장
+    loadSchedule(route, savedDay);
+  });
+}

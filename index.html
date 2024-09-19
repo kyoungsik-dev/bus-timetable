@@ -13,26 +13,33 @@
 <body>
 
   <header>
-    시흥-판교 버스 시간표
+    <div class="header-container">
+      <span>
+        🚌 시흥-판교 버스 시간표
+      </span>
+    </div>
   </header>
 
   <div class="container">
     <div class="selector-container">
-      <select id="route-selector">
-        <option value="3202">3202번 (신천·은행·은계 -판교)</option>
-        <option value="3302">3302번 (능곡·장현·목감-판교)</option>
-        <option value="3402">3402번 (정왕·배곧-판교)</option>
-      </select>
+      <div class="button-list">
+        <button class="route-btn" data-route="3202">3202</button>
+        <button class="route-btn" data-route="3302">3302</button>
+        <button class="route-btn" data-route="3402">3402</button>
+      </div>
   
       <select id="day-selector">
         <option value="weekday">평일</option>
-        <option value="weekend">토요일/공휴일</option>
+        <option value="weekend">주말</option>
       </select>
     </div>
 
     <div class="table-container" id="table-container">
       <table>
         <thead>
+          <tr>
+            <th colspan="2" id="route-name">abc</th>
+          </tr>
           <tr>
             <th>시흥 출발</th>
             <th>판교 출발</th>
