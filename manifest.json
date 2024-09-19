@@ -1,0 +1,21 @@
+{
+  "name": "삼미시장-판교 버스 시간표",
+  "short_name": "버스 시간표",
+  "description": "삼미시장과 판교 간 버스 시간표를 제공하는 웹 앱",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
