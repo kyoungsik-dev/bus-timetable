@@ -33,6 +33,12 @@ routeSelector.value = savedRoute;
 daySelector.value = savedDay;
 loadSchedule(savedRoute, savedDay);
 
+window.addEventListener('load', function() {
+  const elem = document.querySelector('.table-container');
+  elem.classList.add('loaded');
+});
+
+
 // 노선 선택 시 시간표 변경
 routeSelector.addEventListener('change', (e) => {
   const selectedRoute = e.target.value;

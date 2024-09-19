@@ -55,6 +55,20 @@ table {
   border-collapse: collapse;
 }
 
+.table-container {
+  transform:
+    translate3d(0, 100px, 0px)
+    scale(1, 1);
+  opacity: 0;
+  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease-in-out transform, 0.4s ease-in-out opacity;
+}
+
+.table-container.loaded {
+  transform: scale3d(1, 1, 1);
+  opacity: 1;
+}
+
 th, td {
   border-bottom: 1px solid #ddd;
   padding: 1rem;
