@@ -1,8 +1,9 @@
 {
   "name": "시흥-판교 버스 시간표",
-  "short_name": "시흥-판교 버스 시간표",
+  "short_name": "버스 시간표",
   "description": "시흥-판교 버스 시간표를 제공합니다.",
   "start_url": "/",
+  "id": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#183A37",
