@@ -4,7 +4,7 @@
   "description": "시흥-판교 버스 시간표를 제공합니다.",
   "start_url": "/",
   "id": "/",
-  "display": "minimal-ui",
+  "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#183A37",
   "icons": [
