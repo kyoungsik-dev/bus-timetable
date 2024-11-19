@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bus-schedule-cache';
+const CACHE_NAME = 'bus-schedule-cache-v2';
 const urlsToCache = [
   '/',
   '/index.html',
