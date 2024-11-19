@@ -62,3 +62,8 @@ for (let i = 0; i < buttons.length; i++) {
     loadSchedule(route, savedDay);
   });
 }
+
+if ('serviceWorker' in navigator) {
+  console.log('Service Worker is supported');
+  navigator.serviceWorker.register("/service-worker.js");
+}
